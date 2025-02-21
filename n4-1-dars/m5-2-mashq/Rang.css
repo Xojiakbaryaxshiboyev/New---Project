@@ -1,0 +1,128 @@
+body{
+    background-color: #bca379 ; /*eskirgan rang,och jigarrang yoki bej rang*/
+    color:#333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #8b5f4d;/*Eskirang*/
+    text-shadow: 3px 3px 8px rgba(0,0,0 0.5);/*soyali efekt*/
+    text-align: center;/*matin markazga joylashtirildi*/
+    margin-top: 100px;/*yuqoridan bo`shjoy*/
+}
+/* Dumaloq shakil */
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Dumaloq shakil qilish */
+    overflow: hidden;/*Raimni dumaloq shakilga sig`dirish */
+    margin: 20px auto;/*Markazga joylashtirish*/
+    animation: rotateImage 5s infinite linear;/*Animatsiya*/
+}
+/*Rasimga shakil joylashtirish */
+.circle-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rasim shaklini toliq moslashtiradi*/
+}
+/*Rasim aylanib turadigan azimatsiya */
+@keyframes rotateImage {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    }
+    /*Navigatsiya uchun styling */
+    nav{
+        background-color:#333;
+        padding:10px 0;
+    }
+    .nav-list{
+        list-style: none;
+        text-align: 0 20px;
+    }
+    .nav-list a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    /*Hover animatsiyasi */
+    .nav-list a:hover{
+        background-color: #ff6600;
+        transform: scale(1.1);/*Yuzaga chiqarish */
+    }
+    /* Mobil va kichik ekranlarda menyu */
+    @media (max-width:768px) {
+        .nav-list {
+            display: block;
+        }
+        .nav-list li {
+            margin:10px 0;
+        }
+
+    }
+    /* Restaurantlar bo'limi */
+.restaurant-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.restaurant-card {
+    width: 300px;
+    margin: 20px;
+    background-color: rgb(86, 56, 11);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animatsiyasi restoran kartalari uchun */
+.restaurant-card:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 15px 15px rgb(118, 106, 13);
+}
+
+/* Restaurantlar rasmga stil */
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Title va tavsif */
+.restaurant-card h3 {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #000000;
+}
+
+.restaurant-card p.restaurant-info {
+    font-size: 14px;
+    color: #522a08;
+    padding: 0 20px 20px;
+    font-weight: bold;/* matini qalin qilish*/
+    font-style: italic;/*matinga rang berish*/
+}
+
+/* Mobil uchun moslashuvchanlik */
+@media (max-width: 768px) {
+    .restaurant-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    
